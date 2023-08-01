@@ -1,8 +1,8 @@
-const token = 'c595c89d2997cd95852ed7df2eeb70327a97d99488f7b330'
+const token = '6dbcb26924bfcadf20554cc31b7705dea6b5389a0d0641a0'
 
 export const server_calls = {
     get: async () => { 
-        const response = await fetch(`https://hotline-bling.glitch.me/api/contacts`,
+        const response = await fetch(`https://sport-flask.onrender.com//api/contacts`,
         {
             method: 'GET',
             headers: {
@@ -21,7 +21,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch(`https://hotline-bling.glitch.me/api/contacts`,
+        const response = await fetch(`https://sport-flask.onrender.com//api/contacts`,
         {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ export const server_calls = {
     },
 
     update: async (id: string, data:any = {}) => {
-        const response = await fetch(`https://hotline-bling.glitch.me/api/contacts/${id}`,
+        const response = await fetch(`https://sport-flask.onrender.com//api/contacts/${id}`,
         {
             method: 'PUT',
             headers: {
@@ -61,7 +61,7 @@ export const server_calls = {
     },
 
     delete: async (id: string) => {
-        const response = await fetch(`https://hotline-bling.glitch.me/api/contacts/${id}`,
+        const response = await fetch(`https://sport-flask.onrender.com//api/contacts/${id}`,
         {
             method: 'DELETE',
             headers: {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Button from "./Button"
 import Modal from "./Modal"
 import { server_calls } from '../api/server';
@@ -8,11 +8,11 @@ import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: "ID", width: 90},
-    { field: 'first', headerName: "Contact First Name", flex: 1},
-    { field: 'last', headerName: "Contact Last Name", flex: 1},
+    { field: 'name', headerName: "Name", flex: 1},
     { field: 'email', headerName: "Email", flex: 1},
-    { field: 'phone_number', headerName: "Phone Number", flex: 1},
-    { field: 'address', headerName: "Address", flex: 1}
+    { field: 'state', headerName: "State", flex: 1},
+    { field: 'team', headerName: "Team", flex: 1},
+    { field: 'sport', headerName: "Sport", flex: 1}
 ]
 
 
@@ -50,7 +50,7 @@ function DataTable() {
                     className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white"
                     onClick={() => handleOpen()}
                 >
-                    Create New Contact
+                    Create New Favorite Team
                 </button>
             </div> 
             <Button onClick={handleOpen} className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Update</Button>

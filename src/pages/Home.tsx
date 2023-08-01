@@ -1,4 +1,4 @@
-import Background from '../assets/images/mountains.jpg'
+import Background from '../assets/Images/fans.jpeg'
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       className='flex flex-row justify-center mx-auto bg-cover bg-fixed'
       >
         <div className='flex place-items-center h-screen'>
-          <h3 className='p-5 bg-white bg-opacity-50 text-black rounded'>Welcome To the Phonebook</h3>
+          <h2 className='p-5 bg-white bg-opacity-50 text-black'>Welcome To Fandamonium</h2>
         </div>
     </div>
   )

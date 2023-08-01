@@ -24,12 +24,12 @@ function Navbar() {
     };
 
     return (
-        <nav className='flex items-center justify-between flex-wrap bg-teal-500 p-6'>
+        <nav className='flex items-center justify-between flex-wrap bg-green-500 p-6'>
             <div className='flex items-center flex-shrink-0 text-white mr-6'>
-                <Link to='/' className='font-semibold text-xl tracking-tight'>Digit</Link>
+                <Link to='/' className='font-semibold text-xl tracking-tight'>Fandamonium</Link>
             </div>
             <div className='block'>
-                <button onClick={dropDown} className='flex items-center px-3 py-2 text-teal-200 border rounded border-teal-400 hover:text-white hover:border-white'>
+                <button onClick={dropDown} className='flex items-center px-3 py-2 text-red-200 border rounded border-green-400 hover:text-yellow hover:border-white'>
                     <i className='fas fa-bars'></i>
                 </button>
             </div>
@@ -61,7 +61,7 @@ function Navbar() {
                         <Button className='p-3 m-5 bg-teal-400 justify-center'>
                             <div>
                                 <Link to='/dashboard' onClick={ clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>
-                                    Dashboard
+                                    Fanzone
                                 </Link>
                             </div>
                         </Button>

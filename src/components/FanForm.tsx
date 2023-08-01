@@ -1,18 +1,17 @@
-import { useSubmit } from "react-router-dom"
 import Button from "./Button"
 import Input from "./Input"
 
 import { useForm } from 'react-hook-form'
 import { server_calls } from "../api/server"
 import { useDispatch, useStore } from "react-redux"
-import { chooseFirst, chooseLast, chooseEmail, chooseAddress, choosePhone } from "../redux/slices/RootSlice"
+import { chooseName, chooseEmail, chooseState, chooseTeam, chooseSport } from "../redux/slices/RootSlice"
 
-interface ContactFormProps {
+interface sportFormProps {
   id?: string[];
   onClose: () => void;
 }
 
-const ContactForm = ( props:ContactFormProps) => {
+const sportForm = ( props:sportFormProps) => {
   const { register, handleSubmit } = useForm({})
   const dispatch = useDispatch();
   const store = useStore();
@@ -27,11 +26,11 @@ const ContactForm = ( props:ContactFormProps) => {
       setTimeout(() => {window.location.reload()}, 1000);
       event.target.reset()
     } else {
-      dispatch(chooseFirst(data.first));
-      dispatch(chooseLast(data.last));
+      dispatch(chooseName(data.name));
       dispatch(chooseEmail(data.email));
-      dispatch(choosePhone(data.phone_number));
-      dispatch(chooseAddress(data.address));
+      dispatch(chooseState(data.state));
+      dispatch(chooseTeam(data.team));
+      dispatch(chooseSport(data.sport));
 
       server_calls.create(store.getState())
       setTimeout(() => {window.location.reload()}, 1000);
@@ -45,24 +44,24 @@ const ContactForm = ( props:ContactFormProps) => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <label htmlFor="name">Contact First Name</label>
-          <Input {...register('first')} name='first' placeholder="First" />
-        </div>
-        <div>
-          <label htmlFor="name">Contact Last Name</label>
-          <Input {...register('last')} name='last' placeholder="Last" />
+          <label htmlFor="name">Name</label>
+          <Input {...register('name')} name='name' placeholder="name" />
         </div>
         <div>
           <label htmlFor="email">Email</label>
-          <Input {...register('email')} name='email' placeholder="Email" />
+          <Input {...register('email')} name='email' placeholder="email" />
         </div>
         <div>
-          <label htmlFor="phone_number">Phone Number</label>
-          <Input {...register('phone_number')} name='phone_number' placeholder="Phone Number" />
+          <label htmlFor="state">State</label>
+          <Input {...register('state')} name='state' placeholder="state" />
         </div>
         <div>
-          <label htmlFor="address">Address</label>
-          <Input {...register('address')} name='address' placeholder="Address" />
+          <label htmlFor="team">Phone Number</label>
+          <Input {...register('team')} name='team' placeholder="team" />
+        </div>
+        <div>
+          <label htmlFor="sport">Address</label>
+          <Input {...register('sport')} name='sport' placeholder="sport" />
         </div>
         <div className="flex p-1">
           <Button className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
@@ -75,4 +74,4 @@ const ContactForm = ( props:ContactFormProps) => {
   )
 }
 
-export default ContactForm
+export default sportForm
