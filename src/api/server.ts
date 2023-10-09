@@ -1,8 +1,8 @@
-const token = '6dbcb26924bfcadf20554cc31b7705dea6b5389a0d0641a0'
+const token = 'ee9b812186192d22974a65aca0cc634914f72563ac8272e7'
 
 export const server_calls = {
     get: async () => { 
-        const response = await fetch(`https://sport-flask.onrender.com//api/contacts`,
+        const response = await fetch(`https://sport-flask.onrender.com/api/fans`,
         {
             method: 'GET',
             headers: {
@@ -21,7 +21,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch(`https://sport-flask.onrender.com//api/contacts`,
+        const response = await fetch(`https://sport-flask.onrender.com/api/fans`,
         {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ export const server_calls = {
     },
 
     update: async (id: string, data:any = {}) => {
-        const response = await fetch(`https://sport-flask.onrender.com//api/contacts/${id}`,
+        const response = await fetch(`https://sport-flask.onrender.com/api/fans/${id}`,
         {
             method: 'PUT',
             headers: {
@@ -61,7 +61,7 @@ export const server_calls = {
     },
 
     delete: async (id: string) => {
-        const response = await fetch(`https://sport-flask.onrender.com//api/contacts/${id}`,
+        const response = await fetch(`https://sport-flask.onrender.com/api/fans/${id}`,
         {
             method: 'DELETE',
             headers: {

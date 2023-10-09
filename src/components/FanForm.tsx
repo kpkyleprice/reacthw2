@@ -56,11 +56,11 @@ const sportForm = ( props:sportFormProps) => {
           <Input {...register('state')} name='state' placeholder="state" />
         </div>
         <div>
-          <label htmlFor="team">Phone Number</label>
+          <label htmlFor="team">Team</label>
           <Input {...register('team')} name='team' placeholder="team" />
         </div>
         <div>
-          <label htmlFor="sport">Address</label>
+          <label htmlFor="sport">Sport</label>
           <Input {...register('sport')} name='sport' placeholder="sport" />
         </div>
         <div className="flex p-1">

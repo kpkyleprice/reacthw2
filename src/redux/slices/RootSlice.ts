@@ -3,18 +3,18 @@ import { createSlice } from '@reduxjs/toolkit'
 const rootSlice = createSlice({
     name: "root",
     initialState: {
-        first: "First Name",
-        last: "Last Name",
+        name: " Name",
         email: "Email",
-        phone_number: "Phone Number",
-        address: "Address",
+        state: "State",
+        team: "Team",
+        sport: "Sport",
     },
     reducers: {
-        chooseName: (state, action) => { state.first = action.payload},
-        chooseEmail: (state, action) => { state.last = action.payload},
-        chooseState: (state, action) => { state.email = action.payload},
-        chooseTeam: (state, action) => { state.phone_number = action.payload},
-        chooseSport: (state, action) => { state.address = action.payload}
+        chooseName: (state, action) => { state.name = action.payload},
+        chooseEmail: (state, action) => { state.email = action.payload},
+        chooseState: (state, action) => { state.state = action.payload},
+        chooseTeam: (state, action) => { state.team = action.payload},
+        chooseSport: (state, action) => { state.sport = action.payload}
     }
 })
 
